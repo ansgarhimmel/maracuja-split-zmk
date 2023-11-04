@@ -102,6 +102,9 @@
     COMBO(auml, &kp AUML, 10 12, DEFAULT)
     COMBO(ouml, &kp OUML, 1 12, DEFAULT)
     COMBO(uuml, &kp UUML, 12 13, DEFAULT)
+    COMBO(esc, &kp ESC, 1 2, DEFAULT)
+    COMBO(tab, &kp TAB, 11 12, DEFAULT)
+    
   };
 
   keymap {
