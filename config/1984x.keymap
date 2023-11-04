@@ -128,7 +128,7 @@
 
     second_layer {
       bindings = <
-   &none        &none        &none        &kp C_BRI_DN &kp C_BRI_UP         &kp C_VOL_DN &kp C_VOL_UP &kp C_PP     &kp DEL      &none        
+   &out OUT_BLE &none        &none        &kp C_BRI_DN &kp C_BRI_UP         &kp C_VOL_DN &kp C_VOL_UP &kp C_PP     &kp DEL      &none        
    &caps_word   &none        &none        &none        &none                &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp PG_UP
    &kp LCTRL    &kp LALT     &kp LSFT     &none        &none                &kp HOME     &kp END      &kp K_APP    &kp INS      &kp PG_DN
                              &trans       &kp LGUI     &trans               &trans       &trans       &trans
