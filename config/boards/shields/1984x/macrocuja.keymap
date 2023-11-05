@@ -1,0 +1,157 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+#define DEFAULT 0
+#define NUM     1
+#define NAV     2
+#define APP     3
+
+&caps_word {
+  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
+
+&mt {
+  quick-tap-ms = <200>;
+};
+
+/ {
+  macros {
+
+    opt_bspc: opt_bspc {
+      label = "OPT_BSPC";
+      compatible = "zmk,behavior-macro"; \
+      #binding-cells = <0>; \
+      bindings = <&macro_press &kp LALT> \
+               , <&macro_tap &kp BSPC> \
+               , <&macro_release &kp LALT>;
+    };
+  };
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <NUM NAV>;
+        then-layer = <APP>;
+    };
+  };
+
+  behaviors {
+
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping_term_ms = <250>;
+      quick-tap-ms = <200>;
+      global-quick-tap;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+
+    hmt: homerow_mods_no_quicktap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping_term_ms = <250>;
+      quick-tap-ms = <200>;
+      flavor = "balanced";
+      bindings = <&kp>, <&kp>;
+    };
+
+    lhp: layer_hold_prefered {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LAYER_HOLD_PREFERED";
+      #binding-cells = <2>;
+      tapping_term_ms = <150>;
+      flavor = "hold-preferred";
+      bindings = <&mo>, <&kp>;
+    };
+
+  };
+
+  combos {
+    compatible = "zmk,combos";
+
+    #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+      combo_##NAME { \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        layers = <LAYERS>; \
+      };
+
+    /*
+      ╭─────────────────────╮
+      │   0   1   2   3   4 │
+      │   5   6   7   8   9 │ 
+      │  10  11  12  13  14 |
+      |  15  16  17╭────────╯
+      ╰────────────╯
+    */
+
+    COMBO(caps_word, &caps_word, 10 14, DEFAULT)
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+      label = "Base";
+      bindings = <
+   &kp KP_PLUS     &kp 7        &kp 8        &kp 9        &kp KP_DIVIDE
+   &kp KP_MINUS    &kp 4        &kp 5        &kp 6        &kp G
+   &kp KP_ASTERISK &kp 1        &kp 2        &kp 3        &kp KP_COMMA
+   &kp ENTER       &mt LGUI ESC &lhp NUM TAB
+      >;
+    };
+
+    num_layer {
+      label = "Num";
+      bindings = <
+   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
+   &kp TILDE    &kp AMPS     &kp LPAR     &kp LBRC     &kp LBKT
+   &kp GRAVE    &kp PIPE     &kp RPAR     &kp RBRC     &kp RBKT
+   &trans       &trans       &trans 
+      >;
+    };
+
+    app_layer {
+      label = "App";
+      bindings = <
+   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5           
+   &kp CAPS     &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK  
+   &none        &none        &none        &none        &none            
+   &trans       &none        &none            
+      >;
+    };
+
+    system_layer {
+      label = "System";
+      bindings = <
+   &bt BT_SEL 0      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR 
+   &ext_power EP_ON  &none        &none        &bt BT_SEL 4 &bt BT_SEL 5 
+   &ext_power EP_OFF &none        &none        &none        &none        
+   &trans            &none        &none      
+      >;
+    };
+
+    empty_layer {
+      label = "Empty";
+      bindings = <
+   &none        &none        &none        &none        &none 
+   &none        &none        &none        &none        &none 
+   &none        &none        &none        &none        &none
+   &none        &none        &none
+      >;
+    };
+
+  };
+};
+

@@ -1,7 +1,7 @@
-#include "1984x.dtsi"
+#include "macrocuja.dtsi"
 
 &default_transform {
-    col-offset = <5>;
+    col-offset = <0>;
 };
 
 &kscan0 {
