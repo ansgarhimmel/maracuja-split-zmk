@@ -1,4 +1,4 @@
-#include "1984x.dtsi"
+#include "maracuja.dtsi"
 
 &kscan0 {
     row-gpios

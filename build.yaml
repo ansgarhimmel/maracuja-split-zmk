@@ -14,8 +14,8 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: 1984x_left
+    shield: maracuja_left
   - board: seeeduino_xiao_ble
-    shield: 1984x_right
+    shield: maracuja_right
   - board: seeeduino_xiao_ble
     shield: settings_reset

@@ -1,15 +1,15 @@
 
-if SHIELD_1984X_LEFT
+if SHIELD_MARACUJA_LEFT
 
 config ZMK_KEYBOARD_NAME
-  default "1984x"
+  default "Maracuja Split BLE"
 
 config ZMK_SPLIT_ROLE_CENTRAL
   default y
 
 endif
 
-if SHIELD_1984X_LEFT || SHIELD_1984X_RIGHT
+if SHIELD_MARACUJA_LEFT || SHIELD_MARACUJA_RIGHT
 config ZMK_SPLIT
   default y
 

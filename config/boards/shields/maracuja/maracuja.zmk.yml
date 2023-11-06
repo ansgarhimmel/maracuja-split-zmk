@@ -1,0 +1,11 @@
+file_format: "1"
+id: maracuja_split
+name: maracuja_split
+type: shield
+url: https://github.com/ansgarhimmel/maracuja-split
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - maracuja_left
+  - maracuja_right
