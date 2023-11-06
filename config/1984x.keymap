@@ -104,7 +104,7 @@
     COMBO(uuml, &kp UUML, 12 13, DEFAULT)
     COMBO(esc, &kp ESC, 1 2, DEFAULT)
     COMBO(tab, &kp TAB, 11 12, DEFAULT)
-    
+    COMBO(szuml, &kp DE_SS, 17 19, DEFAULT)
   };
 
   keymap {
@@ -115,17 +115,17 @@
       bindings = <
    &de_quot     &hm LALT O   &hm LGUI E   &kp P        &kp Z                &kp F        &kp G        &hm RGUI T   &hm RALT N   &kp L
    &hm LCTL A   &kp COMMA    &kp DOT      &hs LSHFT U  &kp I                &kp D        &hs RSHFT H  &kp C        &kp R        &hm RCTL S
-   &kp DE_EXCL  &kp Q        &kp J        &kp K        &kp X                &kp B        &kp M        &kp W        &kp V        &kp Z
+   &kp DE_EXCL  &kp Q        &kp J        &kp K        &kp X                &kp B        &kp M        &kp W        &kp V        &kp Y
                              &mo L3       &lt L1 BSPC  &lt L2 DEL           &lt L2 ENTER &lt L1 SPACE &mo L3
       >;
     };
 
     first_layer {
       bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5               &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
-   &kp TILDE    &kp AMPS     &kp LPAR     &kp LBRC     &kp LBKT             &kp PLUS     &kp MINUS    &kp SQT      &kp STAR     &kp SEMI
-   &kp GRAVE    &kp PIPE     &kp RPAR     &kp RBRC     &kp RBKT             &kp EQUAL    &kp UNDER    &kp DQT      &kp DLLR     &kp BSLH
-                             &trans       &trans       &trans               &trans       &trans       &trans
+   &kp DE_DLLR    &hm LALT DE_PIPE &hm LGUI DE_BSLH &kp RA(N7)       &kp RA(N0)             &kp KP_PLUS  &kp N7    &kp N8      &kp N9     &kp DE_MINS
+   &hm LCTL DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hs LSHFT LS(N8) &kp LS(N9)             &kp DE_EQUL  &kp N4    &kp N5      &kp N6     &kp DE_MINS
+   &kp DE_PCNT    &kp DE_LT        &kp DE_GT        &kp RA(N8)       &kp RA(N9)             &kp DE_STAR  &kp N1    &kp N2      &kp N3     &none
+                                   &trans           &trans           &trans                 &trans       &trans       &trans
       >;
     };
 
