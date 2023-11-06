@@ -125,7 +125,7 @@
    &kp DE_DLLR    &hm LALT DE_PIPE &hm LGUI DE_BSLH &kp RA(N7)       &kp RA(N0)             &kp KP_PLUS  &kp N7    &kp N8      &kp N9     &kp DE_MINS
    &hm LCTL DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hs LSHFT LS(N8) &kp LS(N9)             &kp DE_EQUL  &kp N4    &kp N5      &kp N6     &kp DE_MINS
    &kp DE_PCNT    &kp DE_LT        &kp DE_GT        &kp RA(N8)       &kp RA(N9)             &kp DE_STAR  &kp N1    &kp N2      &kp N3     &none
-                                   &trans           &trans           &trans                 &trans       &trans       &trans
+                                   &trans           &trans           &trans                 &trans       &kp N0    &trans
       >;
     };
 
@@ -140,10 +140,10 @@
 
     third_layer {
       bindings = <
-   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5               &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
-   &kp CAPS     &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK      &none        &none        &none        &none        &none
-   &none        &none        &none        &none        &none                &none        &none        &none        &none        &none
-                             &trans       &none        &none                &none        &none        &none
+   &kp F1       &kp F2       &kp F3       &kp F4       &kp F5               &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END
+   &kp CAPS     &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK      &none    &kp LEFT  &kp DOWN &kp RIGHT &none  
+   &none        &none        &none        &none        &none                &none    &none     &none    &none     &none
+                             &trans       &none        &none                &none    &none     &none
       >;
     };
 
