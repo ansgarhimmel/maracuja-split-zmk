@@ -2,7 +2,7 @@
 if SHIELD_MARACUJA_LEFT
 
 config ZMK_KEYBOARD_NAME
-  default "Maracuja Split BLE"
+  default "Maracuja Split"
 
 config ZMK_SPLIT_ROLE_CENTRAL
   default y
