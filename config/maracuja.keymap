@@ -11,10 +11,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
-#define L1 1  // NUMBERs, Special Chars
-#define L2 2  // F1-12..
-#define L3 3  // NAVI
-#define L4 4  // BLUETOOTH
+#define MAC 1
+#define L1 2  // NUMBERs, Special Chars
+#define L2 3  // F1-12..
+#define L3 4  // NAVI
+#define L4 5  // BLUETOOTH
 
 #define AUML APOS
 #define OUML SEMI
@@ -105,6 +106,7 @@
     COMBO(esc, &kp ESC, 1 2, DEFAULT)
     COMBO(tab, &kp TAB, 11 12, DEFAULT)
     COMBO(szuml, &kp DE_SS, 17 19, DEFAULT)
+    COMBO(osx, &tog MAC, 1 24, DEFAULT)
   };
 
   keymap {
@@ -113,10 +115,20 @@
     default_layer {
       label = "Base";
       bindings = <
-   &de_quot     &hm LALT O   &hm LGUI E   &kp P        &kp Z                &kp F        &kp G        &hm RGUI T   &hm RALT N   &kp L
-   &hm LCTL A   &kp COMMA    &kp DOT      &hs LSHFT U  &kp I                &kp D        &hs RSHFT H  &kp C        &kp R        &hm RCTL S
+   &de_quot     &hm LALT O   &hm LCTL E   &kp P        &kp Z                &kp F        &kp G        &hm RCTL T   &hm RALT N   &kp L
+   &hm LGUI A   &kp COMMA    &kp DOT      &hs LSHFT U  &kp I                &kp D        &hs RSHFT H  &kp C        &kp R        &hm RGUI S
    &kp DE_EXCL  &kp Q        &kp J        &kp K        &kp X                &kp B        &kp M        &kp W        &kp V        &kp Y
                              &mo L3       &lt L1 BSPC  &lt L2 DEL           &lt L2 ENTER &lt L1 SPACE &mo L3
+      >;
+    };
+
+    mac_layer {
+      label = "Mac Os";
+      bindings = <
+   &trans     &trans   &hm LGUI E  &trans   &trans            &trans   &trans  &hm RGUI T  &trans  &trans
+   &hm LCTL A &trans   &trans      &trans   &trans            &trans   &trans  &trans      &trans  &hm RCTL S
+   &trans     &trans   &trans      &trans   &trans            &trans   &trans  &trans      &trans  &trans
+                       &trans      &trans   &trans            &trans   &trans  &trans
       >;
     };
 
