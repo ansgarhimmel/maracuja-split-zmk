@@ -106,7 +106,7 @@
     COMBO(esc, &kp ESC, 1 2, DEFAULT)
     COMBO(tab, &kp TAB, 11 12, DEFAULT)
     COMBO(szuml, &kp DE_SS, 17 19, DEFAULT)
-    COMBO(osx, &tog MAC, 1 24, DEFAULT)
+    COMBO(osx, &tog MAC, 1 24, DEFAULT MAC)
   };
 
   keymap {
