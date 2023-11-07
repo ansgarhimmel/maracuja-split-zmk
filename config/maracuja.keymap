@@ -143,9 +143,9 @@
 
     second_layer {
       bindings = <
-   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0         &kp C_VOL_UP &kp F7   &kp F8   &kp F9    &kp F10        
-   &out OUT_BLE &none        &none        &none        &none                &kp C_PP     &kp F4   &kp F5   &kp F6    &kp F11
-   &bt BT_CLR   &none        &none        &none        &none                &kp C_VOL_DN &kp F1   &kp F2   &kp F3    &kp F12
+   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0         &kp K_VOL_UP &kp F7   &kp F8   &kp F9    &kp F10        
+   &out OUT_BLE &none        &none        &none        &none                &kp K_PP     &kp F4   &kp F5   &kp F6    &kp F11
+   &bt BT_CLR   &none        &none        &none        &none                &kp K_VOL_DN &kp F1   &kp F2   &kp F3    &kp F12
                              &trans       &trans       &trans               &trans       &trans       &trans
       >;
     };
@@ -153,7 +153,7 @@
     third_layer {
       bindings = <
    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5               &kp HOME &kp PG_UP &kp UP   &kp PG_DN   &kp END
-   &none       &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK      &none    &kp LEFT  &kp DOWN &kp RIGHT   &none  
+   &kp CAPS    &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK      &none    &kp LEFT  &kp DOWN &kp RIGHT   &none  
    &sys_reset  &bootloader  &none        &none        &none                &none    &none     &none    &bootloader &sys_reset
                             &trans       &trans       &trans               &trans   &trans    &trans
       >;
