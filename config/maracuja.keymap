@@ -51,6 +51,8 @@
   quick-tap-ms = <200>;
 };
 
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+
 / {
 
   behaviors {
@@ -70,6 +72,14 @@
         bindings = <&kp>, <&kp>;
         tapping-term-ms = <160>;
         flavor = "balanced";
+    };
+    mo_tog: behavior_mo_tog {
+        compatible = "zmk,behavior-hold-tap";
+        label = "mo_tog";
+        #binding-cells = <2>;
+        flavor = "hold-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&mo>, <&tog>;
     };
     de_quot: german_quote_doublequote {
         compatible = "zmk,behavior-mod-morph";
@@ -118,7 +128,7 @@
    &de_quot     &hm LALT O   &hm LCTL E   &kp P        &kp Z                &kp F        &kp G        &hm RCTL T   &hm RALT N   &kp L
    &hm LGUI A   &kp COMMA    &kp DOT      &hs LSHFT U  &kp I                &kp D        &hs RSHFT H  &kp C        &kp R        &hm RGUI S
    &kp DE_EXCL  &kp Q        &kp J        &kp K        &kp X                &kp B        &kp M        &kp W        &kp V        &kp Y
-                             &mo L3       &lt L1 BSPC  &lt L2 DEL           &lt L2 ENTER &lt L1 SPACE &mo L3
+                             MO_TOG(L3)   &lt L1 BSPC  &lt L2 DEL           &lt L2 ENTER &lt L1 SPACE MO_TOG(L3)
       >;
     };
 
