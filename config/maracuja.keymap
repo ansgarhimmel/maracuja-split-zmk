@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define MAC 1
@@ -162,8 +163,8 @@
 
     third_layer {
       bindings = <
-   &kp F1      &kp F2       &kp F3       &kp F4       &kp F5               &kp HOME &kp PG_UP &kp UP   &kp PG_DN   &kp END
-   &kp CAPS    &none        &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK      &none    &kp LEFT  &kp DOWN &kp RIGHT   &none  
+   &none       &none        &none        &none        &none                &kp HOME &kp PG_UP &kp UP   &kp PG_DN   &kp END
+   &none       &mkp RCLK    &mkp MCLK    &mkp LCLK    &none                &mkp MB4 &kp LEFT  &kp DOWN &kp RIGHT   &none  
    &sys_reset  &bootloader  &none        &none        &none                &none    &none     &none    &bootloader &sys_reset
                             &trans       &trans       &trans               &trans   &trans    &trans
       >;
