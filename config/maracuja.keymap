@@ -118,7 +118,7 @@
     COMBO(tab, &kp TAB, 11 12, DEFAULT)
     COMBO(szuml, &kp DE_SS, 17 19, DEFAULT)
     COMBO(osx, &tog MAC, 1 24, DEFAULT MAC)
-    COMBO(numlock, &tog L1, 31 34, DEFAULT MAC)
+    COMBO(numlock, &tog L1, 26 27 28, DEFAULT MAC)
     
   };
 
