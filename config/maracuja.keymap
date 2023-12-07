@@ -66,7 +66,7 @@
         tapping-term-ms = <200>;
         flavor = "tap-preferred";
     };
-    sl: homerow_shift {
+    sl: homerow_shift_l {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_SHIFT_L";
         #binding-cells = <2>;
@@ -75,7 +75,7 @@
         flavor = "balanced";
         hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
     };
-    sr: homerow_shift {
+    sr: homerow_shift_r {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_SHIFT_R";
         #binding-cells = <2>;
