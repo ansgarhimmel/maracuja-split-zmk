@@ -66,7 +66,7 @@
         tapping-term-ms = <200>;
         flavor = "tap-preferred";
     };
-    sl: homerow_shift_l {
+    hsl: homerow_shift_l {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_SHIFT_L";
         #binding-cells = <2>;
@@ -75,7 +75,7 @@
         flavor = "balanced";
         hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
     };
-    sr: homerow_shift_r {
+    hsr: homerow_shift_r {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_SHIFT_R";
         #binding-cells = <2>;
@@ -139,7 +139,7 @@
       label = "Base";
       bindings = <
    &de_quot     &hm LALT O   &hm LCTL E   &kp P        &kp Z                &kp F        &kp G        &hm RCTL T   &hm RALT N   &kp L
-   &hm LGUI A   &kp COMMA    &kp DOT      &sl LSHFT U  &kp I                &kp D        &sr RSHFT H  &kp C        &kp R        &hm RGUI S
+   &hm LGUI A   &kp COMMA    &kp DOT      &hsl LSHFT U  &kp I                &kp D        &hsr RSHFT H  &kp C        &kp R        &hm RGUI S
    &kp DE_EXCL  &kp Q        &kp J        &kp K        &kp X                &kp B        &kp M        &kp W        &kp V        &kp Y
                              MO_TOG(L3)   &lt L1 BSPC  &lt L2 DEL           &lt L2 ENTER &lt L1 SPACE MO_TOG(L3)
       >;
@@ -158,7 +158,7 @@
     first_layer {
       bindings = <
    &kp DE_DLLR    &hm LALT DE_PIPE &hm LGUI DE_BSLH &kp RA(N7)       &kp RA(N0)             &kp KP_PLUS  &kp N7    &kp N8      &kp N9     &kp DE_MINS
-   &hm LCTL DE_AT &kp DE_AMPSD     &kp DE_FSLH      &sl LSHFT LS(N8) &kp LS(N9)             &kp DE_EQUL  &kp N4    &kp N5      &kp N6     &kp DE_MINS
+   &hm LCTL DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hsl LSHFT LS(N8) &kp LS(N9)             &kp DE_EQUL  &kp N4    &kp N5      &kp N6     &kp DE_MINS
    &kp DE_PCNT    &kp DE_LT        &kp DE_GT        &kp RA(N8)       &kp RA(N9)             &kp DE_STAR  &kp N1    &kp N2      &kp N3     &none
                                    &trans           &trans           &trans                 &trans       &kp N0    &trans
       >;
