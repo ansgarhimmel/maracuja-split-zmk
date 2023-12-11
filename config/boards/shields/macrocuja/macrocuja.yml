@@ -3,6 +3,6 @@ id: macrocuja
 name: macrocuja
 type: shield
 url: https://github.com/dilshod/36-choc-key-ortholinear-split
-requires: [seeeduino_xiao_ble]
+requires: [seeeduino_xiao_rp2040]
 features:
   - keys
