@@ -24,14 +24,12 @@
 
 / {
   macros {
-
-    opt_bspc: opt_bspc {
-      label = "OPT_BSPC";
-      compatible = "zmk,behavior-macro"; \
-      #binding-cells = <0>; \
-      bindings = <&macro_press &kp LALT> \
-               , <&macro_tap &kp BSPC> \
-               , <&macro_release &kp LALT>;
+    teams_mute: teams_mute {
+      label = "TEAMS_MUTE";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp LCRTL &kp LSHIFT &kp M>;
+        };
     };
   };
 
@@ -105,10 +103,10 @@
     default_layer {
       label = "Base";
       bindings = <
-   &kp KP_PLUS     &kp N7        &kp N8        &kp N9        &kp KP_DIVIDE
-   &kp KP_MINUS    &kp N4        &kp N5        &kp N6        &kp KP_DOT
-   &kp KP_ASTERISK &kp N1        &kp N2        &kp N3        &kp KP_COMMA
-   &kp ENTER       &mt LGUI ESC &lhp NUM TAB
+   &kp BSPC        &kp DELETE    &none         &none         &teams_mute
+   &kp LCTRL       &home         &kp UP        &end          &none
+   &kp LSHIFT      &kp LEFT      &kp DOWN      &kp RIGHT     &none
+   &kp LC(C)       &kp LC(X)     &kp LC(V)
       >;
     };
 
