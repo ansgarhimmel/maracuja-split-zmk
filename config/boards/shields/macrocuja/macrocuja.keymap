@@ -96,7 +96,7 @@
       label = "Base";
       bindings = <
    &kp BSPC        &kp DELETE    &none         &none         &teams_mute
-   &kp LCTRL       &kp home      &kp UP        &kp end       &none
+   &kp LCTRL       &kp HOME      &kp UP        &kp END       &none
    &kp LSHIFT      &kp LEFT      &kp DOWN      &kp RIGHT     &none
    &kp LC(C)       &kp LC(X)     &kp LC(V)
       >;
