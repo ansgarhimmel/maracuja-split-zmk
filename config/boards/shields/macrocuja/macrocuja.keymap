@@ -28,7 +28,14 @@
       label = "TEAMS_MUTE";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp LCTRL &kp LSHIFT &kp M>;
+      bindings 
+        = <&macro_press &kp LCTRL>
+        , <&macro_press &kp LSHFT>
+        , <&macro_press &kp M>
+        , <&macro_release &kp LCTRL>
+        , <&macro_release &kp LSHFT>
+        , <&macro_release &kp M>
+        ;
     };
   };
   
