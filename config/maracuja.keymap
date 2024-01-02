@@ -124,6 +124,9 @@
     COMBO(ouml, &kp OUML, 1 12, 0)
     COMBO(uuml, &kp UUML, 12 13, 0)
     COMBO(szuml, &kp DE_SS, 17 19, 0)
+    COMBO(excl, &kp DE_EXCL, 21 22, 20)
+    COMBO(qustm, &kp LS(MINUS), 27 28, 20)
+
     COMBO(caps_word, &caps_word, 13 16, 250)
     COMBO(esc, &kp ESC, 1 2, 250)
     COMBO(tab, &kp TAB, 11 12, 250)
