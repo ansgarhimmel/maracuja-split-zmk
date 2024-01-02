@@ -142,7 +142,7 @@
       label = "Base";
       bindings = <
    &de_quot     &hm LALT O &hm LCTL E &kp P        &kp Z                &kp F        &kp G        &hm RCTL T   &hm RALT N   &kp DE_HASH
-   &hm LGUI A   &kp Z      &kp L      &hsl LSHFT U &kp I                &kp D        &hsr RSHFT H &kp C        &kp R        &hm RGUI S
+   &hm LGUI A   &kp Y      &kp L      &hsl LSHFT U &kp I                &kp D        &hsr RSHFT H &kp C        &kp R        &hm RGUI S
    &kp COMMA    &kp Q      &kp J      &kp K        &kp X                &kp B        &kp M        &kp W        &kp V        &kp DOT
                            MO_TOG(L3) &lt L1 BSPC  &lt L2 DEL           &lt L2 ENTER &lt L1 SPACE MO_TOG(L3)
       >;
