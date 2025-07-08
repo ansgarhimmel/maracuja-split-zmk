@@ -161,7 +161,7 @@
     first_layer {
       bindings = <
    &kp DE_DLLR    &hm LALT DE_PIPE &hm LGUI DE_BSLH &kp RA(N7)        &kp RA(N0)             &kp KP_PLUS  &kp N7    &kp N8      &kp N9     &kp DE_FSLH
-   &hm LCTL DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hsl LSHFT LS(N8) &kp LS(N9)             &kp DE_MINS  &kp N4    &kp N5      &kp N6     &none
+   &hm LCTL DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hsl LSHFT LS(N8) &kp LS(N9)             &kp DE_EQUL  &kp N4    &kp N5      &kp N6     &kp DE_MINS
    &kp DE_PCNT    &kp DE_LT        &kp DE_GT        &kp RA(N8)        &kp RA(N9)             &kp DE_STAR  &kp N1    &kp N2      &kp N3     &kp DE_EQUL
                                    &trans           &trans            &trans                 &trans       &kp N0    &kp KP_DOT
       >;
